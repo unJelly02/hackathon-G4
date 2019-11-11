@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+mat-card{
+    background-color:#fafafa;
+}
+mat-card-header{
+    background-color:#f4f4f4;
+    font-size:18px;
+    padding:5px;
+    /* color:#ababab; */
+    /* color:#2cb6ef; */
+    color:#005795;
+    
+}
+mat-card-content {
+    background-color:#f8f8f8;
+
+}
+.toolbar{
+justify-content:center;
+font-size:32px;
+
+}
+
+.gray-line{
+    height:inherit;
+    border:1px solid #d8d8d8;
+    margin-right:10px;
+}
+.color{
+    color:#005795;
+}

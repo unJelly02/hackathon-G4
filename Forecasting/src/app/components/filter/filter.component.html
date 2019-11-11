@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header>
+    DATA TO BE FORECASTED
+    <mat-divider></mat-divider>
+  </mat-card-header>
+  <mat-card-content style = "padding:10px;">
+  <div fxFlex = "100%" fxLayout="row"  fxLayoutGap="10px">
+    <div fxFlex = "30%" fxLayout="column" >
+    <label>History Start Date : </label>
+      <mat-form-field class="dateField">
+        <input matInput [matDatepicker]="picker" [max]="minDate" [(ngModel)]="historyStartDate">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class = "gray-line"></div>
+    <div fxFlex = "30%" fxLayout="column" class=" form-group">
+      <label>No of Weeks </label>
+      <input type="text" class="weeks" name="historyWeek" [(ngModel)]="historyWeek" />
+    </div>
+    <div class = "gray-line"></div>
+    <div  fxFlex = "30%" fxLayout="column">
+      <div class="form-group">
+        <label for="channel">Channel</label>
+        <select name="channel" class="channel" [(ngModel)]="channel">
+          <option value='onLine'>Online</option>
+          <option value='inStore'>In-store</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div fxFlex = "100%" fxLayout="row" >
+      <div class = "gray-line"></div>
+    <div fxFlex = "30%" fxLayout="column">
+      
+      <label>Forecast Start Date : </label>
+      <mat-form-field class="dateField">
+        <input matInput [matDatepicker]="toPicker" [min]="minDate" [(ngModel)]="forecastStartDate">
+        <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+        <mat-datepicker #toPicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class = "gray-line"></div>
+    <div fxFlex = "30%" fxLayout="column" class="  form-group">
+      <label>No of Weeks </label>
+      <input type="text" class="weeks" name="forecastWeek" [(ngModel)]="forecastWeek" />
+    </div>
+  </div>
+  </mat-card-content>
+  <mat-card-actions>
+      <button mat-raised-button (click)="applyChange()">Submit</button>
+  </mat-card-actions>
+</mat-card>
